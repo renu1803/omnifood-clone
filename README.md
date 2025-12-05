@@ -31,16 +31,16 @@ It is built using **HTML, CSS, and JavaScript**, and replicates the layout, desi
 ## 📂 Project Structure## Screenshots
 
 ### Screenshot 1
-![Screenshot 1](screenshots/omniscreenshot1.png)
+![Screenshot 1](Screenshots/omniscreenshot1.png)
 
 ### Screenshot 2
-![Screenshot 2](screenshots/omniscreenshot2.png)
+![Screenshot 2](Screenshots/omniscreenshot2.png)
 
 ### Screenshot 3
-![Screenshot 3](screenshots/omniscreenshot3.png)
+![Screenshot 3](Screenshots/omniscreenshot3.png)
 
 ### Screenshot 4
-![Screenshot 4](screenshots/omniscreenshot4.png)
+![Screenshot 4](Screenshots/omniscreenshot4.png)
 
 ### Screenshot 5
-![Screenshot 5](screenshots/omniscreenshot5.png)
+![Screenshot 5](Screenshots/omniscreenshot5.png)
