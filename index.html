@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omnifood - Healthy Meals Delivered</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="#">
+            <h1 class="logo">
+                <img src="https://omnifood-martins.netlify.app/img/omnifood-logo.png" alt="Omnifood Logo">
+            </h1>
+
+        </a>
+        <nav class="main-nav">
+            <ul class="main-nav-list">
+                <li><a class="main-nav-link" href="#how">How it works</a></li>
+                <li><a class="main-nav-link" href="#meals">Meals</a></li>
+                <li><a class="main-nav-link" href="#testimonials">Testimonials</a></li>
+                <li><a class="main-nav-link" href="#pricing">Pricing</a></li>
+                <li><a class="main-nav-link nav-cta" href="#cta">Try for free</a></li>
+            </ul>
+        </nav>
+        
+        <button class="btn-mobile-nav">
+            <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+            <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+        </button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="section-hero">
+        <div class="hero">
+            <div class="hero-text-box">
+                <h1 class="heading-primary">A healthy meal delivered to your door, every single day</h1>
+                <p class="hero-description">
+                    The smart 365-days-per-year food subscription that will make you eat healthy again. 
+                    Tailored to your personal tastes and nutritional needs.
+                </p>
+                <a href="#cta" class="btn btn--full margin-right-sm">Start eating well</a>
+                <a href="#how" class="btn btn--outline">Learn more &darr;</a>
+                <div class="delivered-meals">
+                    <div class="delivered-imgs">
+                        <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Customer photo">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Customer photo">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Customer photo">
+                        <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Customer photo">
+                        <img src="https://randomuser.me/api/portraits/women/76.jpg" alt="Customer photo">
+                        <img src="https://randomuser.me/api/portraits/men/87.jpg" alt="Customer photo">
+                    </div>
+                    <p class="delivered-text"><span>250,000+</span> meals delivered last year!</p>
+                </div>
+            </div>
+            <div class="hero-img-box">
+                <img src="https://deliciousbangalore.netlify.app/img/hero-min.png" 
+                     class="hero-img" alt="Woman enjoying food, meals in storage container, and food bowls on a table">
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured In Section -->
+    <section class="section-featured">
+        <div class="container">
+            <div class="logos">
+                <img src="data:image/jpeg;base64,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" alt="Techcrunch logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section-how" id="how">
+        <div class="container">
+            <span class="subheading">How it works</span>
+            <h2 class="heading-secondary">Your daily dose of health in 3 simple steps</h2>
+        </div>
+
+        <div class="container grid grid--2-cols grid--center-v">
+            <!-- STEP 01 -->
+            <div class="step-text-box">
+                <p class="step-number">01</p>
+                <h3 class="heading-tertiary">Tell us what you like (and what not)</h3>
+                <p class="step-description">
+                    Never again waste time thinking about what to eat! Omnifood AI will create a 100% 
+                    personalized weekly meal plan just for you. It makes sure you get all the nutrients 
+                    and vitamins you need, no matter what diet you follow!
+                </p>
+            </div>
+            <div class="step-img-box">
+                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQUHXt7OOSJFcqtFJis5Q-Kcl7evAJZMTp1YQh4D3b19AZWl2sb" 
+                     class="step-img" alt="iPhone app preferences selection screen">
+            </div>
+
+            <!-- STEP 02 -->
+            <div class="step-img-box">
+                <img src="https://omnifood.dev/img/app/app-screen-2.png" 
+                     class="step-img" alt="iPhone app meal approving plan screen">
+            </div>
+            <div class="step-text-box">
+                <p class="step-number">02</p>
+                <h3 class="heading-tertiary">Approve your weekly meal plan</h3>
+                <p class="step-description">
+                    Once per week, approve the meal plan generated for you by Omnifood AI. You can change 
+                    ingredients, swap entire meals, or even add your own recipes.
+                </p>
+            </div>
+
+            <!-- STEP 03 -->
+            <div class="step-text-box">
+                <p class="step-number">03</p>
+                <h3 class="heading-tertiary">Receive meals at convenient time</h3>
+                <p class="step-description">
+                    Best chefs in town will cook your selected meal every day, and we will deliver it to 
+                    your door whenever works best for you. You can change delivery schedule and address daily!
+                </p>
+            </div>
+            <div class="step-img-box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVfn_mGy6jWW4VJlh336GACeRVv9JtExaGHDObFwhtlTxk7nyR" 
+                     class="step-img" alt="iPhone app delivery screen">
+            </div>
+        </div>
+    </section>
+
+    <!-- Meals Section -->
+    <section class="section-meals" id="meals">
+        <div class="container center-text">
+            <span class="subheading">Meals</span>
+            <h2 class="heading-secondary">Omnifood AI chooses from 5,000+ recipes</h2>
+        </div>
+
+        <div class="container grid grid--3-cols margin-bottom-md">
+            <div class="meal">
+                <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                     class="meal-img" alt="Japanese Gyozas">
+                <div class="meal-content">
+                    <div class="meal-tags">
+                        <span class="tag tag--vegetarian">Vegetarian</span>
+                    </div>
+                    <p class="meal-title">Japanese Gyozas</p>
+                    <ul class="meal-attributes">
+                        <li class="meal-attribute">
+                            <i class="fas fa-fire meal-icon"></i>
+                            <span><strong>650</strong> calories</span>
+                        </li>
+                        <li class="meal-attribute">
+                            <i class="fas fa-utensils meal-icon"></i>
+                            <span>NutriScore &reg; <strong>74</strong></span>
+                        </li>
+                        <li class="meal-attribute">
+                            <i class="fas fa-star meal-icon"></i>
+                            <span><strong>4.9</strong> rating (537)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="meal">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                     class="meal-img" alt="Avocado Salad">
+                <div class="meal-content">
+                    <div class="meal-tags">
+                        <span class="tag tag--vegan">Vegan</span>
+                        <span class="tag tag--paleo">Paleo</span>
+                    </div>
+                    <p class="meal-title">Avocado Salad</p>
+                    <ul class="meal-attributes">
+                        <li class="meal-attribute">
+                            <i class="fas fa-fire meal-icon"></i>
+                            <span><strong>400</strong> calories</span>
+                        </li>
+                        <li class="meal-attribute">
+                            <i class="fas fa-utensils meal-icon"></i>
+                            <span>NutriScore &reg; <strong>92</strong></span>
+                        </li>
+                        <li class="meal-attribute">
+                            <i class="fas fa-star meal-icon"></i>
+                            <span><strong>4.8</strong> rating (441)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="diets">
+                <h3 class="heading-tertiary">Works with any diet:</h3>
+                <ul class="list">
+                    <li class="list-item">
+                        <i class="fas fa-check list-icon"></i>
+                        <span>Vegetarian</span>
+                    </li>
+                    <li class="list-item">
+                        <i class="fas fa-check list-icon"></i>
+                        <span>Vegan</span>
+                    </li>
+                    <li class="list-item">
+                        <i class="fas fa-check list-icon"></i>
+                        <span>Pescatarian</span>
+                    </li>
+                    <li class="list-item">
+                        <i class="fas fa-check list-icon"></i>
+                        <span>Gluten-free</span>
+                    </li>
+                    <li class="list-item">
+                        <i class="fas fa-check list-icon"></i>
+                        <span>Lactose-free</span>
+                    </li>
+                    <li class="list-item">
+                        <i class="fas fa-check list-icon"></i>
+                        <span>Keto</span>
+                    </li>
+                    <li class="list-item">
+                        <i class="fas fa-check list-icon"></i>
+                        <span>Paleo</span>
+                    </li>
+                    <li class="list-item">
+                        <i class="fas fa-check list-icon"></i>
+                        <span>Low FODMAP</span>
+                    </li>
+                    <li class="list-item">
+                        <i class="fas fa-check list-icon"></i>
+                        <span>Kid-friendly</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container all-recipes">
+            <a href="#" class="link">See all recipes &rarr;</a>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section-testimonials" id="testimonials">
+        <div class="testimonials-container">
+            <span class="subheading">Testimonials</span>
+            <h2 class="heading-secondary">Once you try it, you can't go back</h2>
+
+            <div class="testimonials">
+                <figure class="testimonial">
+                    <img class="testimonial-img" alt="Photo of customer Dave Bryson" src="https://randomuser.me/api/portraits/men/22.jpg">
+                    <blockquote class="testimonial-text">
+                        Inexpensive, healthy and great-tasting meals, without even having to order manually! 
+                        It feels truly magical.
+                    </blockquote>
+                    <p class="testimonial-name">&mdash; Dave Bryson</p>
+                </figure>
+
+                <figure class="testimonial">
+                    <img class="testimonial-img" alt="Photo of customer Ben Hadley" src="https://randomuser.me/api/portraits/men/33.jpg">
+                    <blockquote class="testimonial-text">
+                        The AI algorithm is crazy good, it chooses the right meals for me every time. 
+                        It's amazing not to worry about food anymore!
+                    </blockquote>
+                    <p class="testimonial-name">&mdash; Ben Hadley</p>
+                </figure>
+
+                <figure class="testimonial">
+                    <img class="testimonial-img" alt="Photo of customer Steve Miller" src="https://randomuser.me/api/portraits/men/44.jpg">
+                    <blockquote class="testimonial-text">
+                        Omnifood is a life saver! I just started a company, so there's no time for cooking. 
+                        I couldn't live without my daily meals now!
+                    </blockquote>
+                    <p class="testimonial-name">&mdash; Steve Miller</p>
+                </figure>
+
+                <figure class="testimonial">
+                    <img class="testimonial-img" alt="Photo of customer Hannah Smith" src="https://randomuser.me/api/portraits/women/55.jpg">
+                    <blockquote class="testimonial-text">
+                        I got Omnifood for the whole family, and it frees up so much time! Plus, 
+                        everything is organic and vegan and without plastic.
+                    </blockquote>
+                    <p class="testimonial-name">&mdash; Hannah Smith</p>
+                </figure>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <figure class="gallery-item">
+                <img src="https://iwonawo.github.io/Omnifood/resources/img/1.jpg" alt="Photo of beautifully arranged food">
+            </figure>
+            <figure class="gallery-item">
+                <img src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvYTAxOS1qYWt1YmstMDI2NC1wYWxlby1zdGVhay1jbG9zZXVwMS5qcGc.jpg" alt="Photo of beautifully arranged food">
+            </figure>
+            <figure class="gallery-item">
+                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQx0HTjjknQmCveYDjT7GK-_Jgv6dug9OqBpoI-AXeDOzYAdcmC" alt="Photo of beautifully arranged food">
+            </figure>
+            <figure class="gallery-item">
+                <img src="https://mltjszn7ad9v.i.optimole.com/w:372/h:248/q:mauto/f:best/https://www.lizpearson.com/wp-content/uploads/2020/07/healthy-recipe.jpg" alt="Photo of beautifully arranged food">
+            </figure>
+            <figure class="gallery-item">
+                <img src="https://www.dellamar.my/sitepad-data/uploads/2023/09/team-img1.jpg" alt="Photo of beautifully arranged food">
+            </figure>
+            <figure class="gallery-item">
+                <img src="https://www.geneticnutrition.in/cdn/shop/articles/discovering-the-best-vegan-protein-sources-nutritional-value-and-benefits-396919.jpg?crop=center&height=100&v=1729854204&width=1400" alt="Photo of beautifully arranged food">
+            </figure>
+                <figure class="gallery-item">
+                <img src="https://static.wixstatic.com/media/27e0ccf286e544dbabde1661ea1532a4.jpg/v1/fill/w_320,h_226,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/27e0ccf286e544dbabde1661ea1532a4.jpg" alt="Photo of beautifully arranged food">
+            </figure>
+                <figure class="gallery-item">
+                <img src="https://m.media-amazon.com/images/I/71FyrYFtq-L._UF350,350_QL80_.jpg" alt="Photo of beautifully arranged food">
+            </figure>
+                <figure class="gallery-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwfwwsaPOnU6mwn6DjM5LQraIk_HK7NWmg3bHG6_GF7R1UeQ8a6qHhdJERjibj54-6Zis&usqp=CAU" alt="Photo of beautifully arranged food">
+            </figure>
+            </figure>
+                <figure class="gallery-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThPA-IrTkgUtOa2xl83hK9clRdCOyEAj30UPpNHMefwH2INLPE" alt="Photo of beautifully arranged food">
+            </figure>
+            </figure>
+                <figure class="gallery-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtPLPNx6KIZTY5mQ1M4kIErsyYcG5Djl5LIBsoFV8zw7kPfvcDZmMR7WRXcyLgnoOsapY&usqp=CAU" alt="Photo of beautifully arranged food">
+            </figure>
+            </figure>
+                <figure class="gallery-item">
+                <img src="https://omnifood.dev/img/gallery/gallery-12.jpg" alt="Photo of beautifully arranged food">
+            </figure>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section-pricing" id="pricing">
+        <div class="container">
+            <span class="subheading">Pricing</span>
+            <h2 class="heading-secondary">Eating well without breaking the bank</h2>
+        </div>
+
+        <div class="container grid grid--2-cols margin-bottom-md">
+            <div class="pricing-plan pricing-plan--starter">
+                <header class="plan-header">
+                    <p class="plan-name">Starter</p>
+                    <p class="plan-price"><span>$</span>399</p>
+                    <p class="plan-text">per month. That's just $13 per meal!</p>
+                </header>
+                <ul class="list">
+                    <li class="list-item">
+                        <i class="fas fa-check list-icon"></i>
+                        <span>1 meal per day</span>
+                    </li>
+                    <li class="list-item">
+                        <i class="fas fa-check list-icon"></i>
+                        <span>Order from 11am to 9pm</span>
+                    </li>
+                    <li class="list-item">
+                        <i class="fas fa-check list-icon"></i>
+                        <span>Delivery is free</span>
+                    </li>
+                    <li class="list-item">
+                        <i class="fas fa-times list-icon"></i>
+                        <span>Get access to latest recipes</span>
+                    </li>
+                </ul>
+                <div class="plan-sign-up">
+                    <a href="#cta" class="btn btn--full">Start eating well</a>
+                </div>
+            </div>
+
+            <div class="pricing-plan pricing-plan--complete">
+                <header class="plan-header">
+                    <p class="plan-name">Complete</p>
+                    <p class="plan-price"><span>$</span>649</p>
+                    <p class="plan-text">per month. That's just $11 per meal!</p>
+                </header>
+                <ul class="list">
+                    <li class="list-item">
+                        <i class="fas fa-check list-icon"></i>
+                        <span><strong>2 meals</strong> per day</span>
+                    </li>
+                    <li class="list-item">
+                        <i class="fas fa-check list-icon"></i>
+                        <span>Order <strong>24/7</strong></span>
+                    </li>
+                    <li class="list-item">
+                        <i class="fas fa-check list-icon"></i>
+                        <span>Delivery is free</span>
+                    </li>
+                    <li class="list-item">
+                        <i class="fas fa-check list-icon"></i>
+                        <span>Get access to latest recipes</span>
+                    </li>
+                </ul>
+                <div class="plan-sign-up">
+                    <a href="#cta" class="btn btn--full">Start eating well</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container grid grid--4-cols">
+            <div class="feature">
+                <i class="fas fa-infinity feature-icon"></i>
+                <p class="feature-title">Never cook again!</p>
+                <p class="feature-text">
+                    Our subscriptions cover 365 days per year, even including major holidays.
+                </p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-apple-alt feature-icon"></i>
+                <p class="feature-title">Local and organic</p>
+                <p class="feature-text">
+                    Our cooks only use local, fresh, and organic products to prepare your meals.
+                </p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-leaf feature-icon"></i>
+                <p class="feature-title">No waste</p>
+                <p class="feature-text">
+                    All our partners only use reusable containers to package all your meals.
+                </p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-pause-circle feature-icon"></i>
+                <p class="feature-title">Pause anytime</p>
+                <p class="feature-text">
+                    Going on vacation? Just pause your subscription, and we refund unused days.
+                </p>
+            </div>
+        </div>
+    </section>
+   <!-- CTA Section -->
+<section class="section-cta" id="cta">
+  <div class="container">
+    <div class="cta">
+      <!-- Text Box -->
+      <div class="cta-text-box">
+        <h2 class="heading-secondary">Get your first meal for free!</h2>
+        <p class="cta-text">
+          Healthy, tasty and hassle-free meals are waiting for you. Start eating well today.
+          You can cancel or pause anytime. And the first meal is on us!
+        </p>
+
+        <form class="cta-form" name="sign-up" netlify>
+          <div>
+            <label for="full-name">Full Name</label>
+            <input id="full-name" type="text" placeholder="John Smith" name="full-name" required>
+          </div>
+
+          <div>
+            <label for="email">Email address</label>
+            <input id="email" type="email" placeholder="me@example.com" name="email" required>
+          </div>
+
+          <div>
+            <label for="select-where">Where did you hear from us?</label>
+            <select id="select-where" name="select-where" required>
+              <option value="">Please choose one option:</option>
+              <option value="friends">Friends and family</option>
+              <option value="youtube">YouTube video</option>
+              <option value="podcast">Podcast</option>
+              <option value="ad">Facebook ad</option>
+              <option value="others">Others</option>
+            </select>
+          </div>
+
+          <button class="btn btn--form" type="submit">Sign up now</button>
+        </form>
+      </div>
+
+      <!-- Image Box -->
+      <div class="cta-img-box" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container grid grid--footer">
+            <div class="logo-col">
+                <a href="#" class="footer-logo">
+                    <img src="https://omnifood-martins.netlify.app/img/omnifood-logo.png" alt="Omnifood Logo">
+                </a>
+
+                <ul class="social-links">
+                    <li><a class="footer-link" href="#"><i class="fab fa-instagram social-icon"></i></a></li>
+                    <li><a class="footer-link" href="#"><i class="fab fa-facebook social-icon"></i></a></li>
+                    <li><a class="footer-link" href="#"><i class="fab fa-twitter social-icon"></i></a></li>
+                </ul>
+
+                <p class="copyright">Copyright &copy; 2023 by Omnifood, Inc. All rights reserved.</p>
+            </div>
+
+            <div class="address-col">
+                <p class="footer-heading">Contact us</p>
+                <address class="contacts">
+                    <p class="address">623 Harrison St., 2nd Floor, San Francisco, CA 94107</p>
+                    <p>
+                        <a class="footer-link" href="tel:415-201-6370">415-201-6370</a><br>
+                        <a class="footer-link" href="mailto:hello@omnifood.com">hello@omnifood.com</a>
+                    </p>
+                </address>
+            </div>
+
+            <nav class="nav-col">
+                <p class="footer-heading">Account</p>
+                <ul class="footer-nav">
+                    <li><a class="footer-link" href="#">Create account</a></li>
+                    <li><a class="footer-link" href="#">Sign in</a></li>
+                    <li><a class="footer-link" href="#">iOS app</a></li>
+                    <li><a class="footer-link" href="#">Android app</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav-col">
+                <p class="footer-heading">Company</p>
+                <ul class="footer-nav">
+                    <li><a class="footer-link" href="#">About Omnifood</a></li>
+                    <li><a class="footer-link" href="#">For Business</a></li>
+                    <li><a class="footer-link" href="#">Cooking partners</a></li>
+                    <li><a class="footer-link" href="#">Careers</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav-col">
+                <p class="footer-heading">Resources</p>
+                <ul class="footer-nav">
+                    <li><a class="footer-link" href="#">Recipe directory</a></li>
+                    <li><a class="footer-link" href="#">Help center</a></li>
+                    <li><a class="footer-link" href="#">Privacy & terms</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
