@@ -28,5 +28,3 @@ It is built using **HTML, CSS, and JavaScript**, and replicates the layout, desi
 
 ---
 
-## 📂 Project Structure
-
