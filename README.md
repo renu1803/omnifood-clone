@@ -27,23 +27,6 @@ It is built using **HTML, CSS, and JavaScript**, and replicates the layout, desi
 - **Ionicons for icons**
 
 ---
-# Omnifood Clone Project
 
-## Screenshots
-
-### Screenshot 1
-![Screenshot 1](screenshots/omniscreenshot1.png)
-
-### Screenshot 2
-![Screenshot 2](screenshots/omniscreenshot2.png)
-
-### Screenshot 3
-![Screenshot 3](screenshots/omniscreenshot3.png)
-
-### Screenshot 4
-![Screenshot 4](screenshots/omniscreenshot4.png)
-
-### Screenshot 5
-![Screenshot 5](screenshots/omniscreenshot5.png)
-
+## 📂 Project Structure
 
